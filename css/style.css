@@ -1,0 +1,334 @@
+@font-face {
+  font-family: "Inter";
+  src: url(/assets/fonts/Inter-Regular.ttf);
+}
+
+:root {
+  --primary-glow: radial-gradient(rgba(1, 65, 255, 0.4), rgba(1, 65, 255, 0));
+  --secondary-glow: linear-gradient(
+    to bottom right,
+    rgba(1, 65, 255, 0),
+    rgba(1, 65, 255, 0),
+    rgba(1, 65, 255, 0.3)
+  );
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  background-color: #101618;
+  margin: 0;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  /* padding-inline: 240px; */
+  display: flex;
+  width: 1450px;
+  display: flex;
+  justify-content: space-between;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.178);
+  align-items: center;
+  height: 80px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+}
+
+.header-left nav {
+  padding: 10px;
+}
+
+.header-left nav a {
+  text-decoration: none;
+  color: aliceblue;
+  justify-content: center;
+  align-items: center;
+}
+
+.header-link {
+  display: flex;
+}
+
+.header-icon {
+  display: flex;
+}
+
+.header-icon nav {
+  padding-inline: 5px;
+}
+
+.profile {
+    border-radius: 50%;
+}
+
+/* Home */
+
+.home {
+  /* font-size: 80px; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-image: url(/assets/images/bg-grid.png); */
+  color: white;
+  height: 100vh;
+  flex-direction: column;
+}
+
+.header-one {
+  color: white;
+  font-size: 80px;
+  width: 1000px;
+  text-align: center;
+}
+
+.home p {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 720px;
+  font-size: 25px;
+  font-family: sans-serif;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.glow-background {
+  background: var(--primary-glow);
+  border-radius: 50%;
+  z-index: -1;
+  width: 100%;
+  height: 80vh;
+  content: "";
+  position: absolute;
+  filter: blur(60px);
+}
+
+.nav-button {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-direction: row;
+  border: 1px solid rgba(255, 255, 255, 0.527);
+  width: 275px;
+  height: 30px;
+  border-radius: 50px;
+}
+
+.nav-button div {
+  display: flex;
+  border-radius: 50px;
+  width: 160px;
+  height: 30px;
+  background: linear-gradient(
+      90deg,
+      rgba(197, 58, 74, 0.966) 0%,
+      rgba(199, 59, 155, 0.644) 51%,
+      rgba(212, 69, 222, 0.671) 100%
+    )
+    padding-box;
+  /* border: 1px solid transparent; */
+}
+.nav-button p {
+  font-size: 13px;
+}
+
+.code {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+.get-started {
+  margin-inline: 10px;
+  background-color: white;
+  width: 130px;
+  height: 50px;
+  padding-inline: 25px;
+  border-radius: 50px;
+  color: rgb(50, 50, 179);
+}
+
+.get-started p {
+  font-size: 15px;
+}
+
+.git {
+  background-color: rgb(18, 27, 44);
+  width: 300px;
+  padding: 10px;
+  height: 30px;
+  border: 2px solid grey;
+}
+
+.git p {
+  display: flex;
+  align-items: flex-end;
+  justify-content: start;
+  font-size: 15px;
+  text-wrap: nowrap;
+  text-align: start;
+}
+
+.code div {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Home */
+
+/* Converter */
+.converter {
+  background-image: url(/assets/images/bg-grid.png);
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.converter-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.converter div p {
+    color: aliceblue;
+    font-size: 20px;
+    width: 600px;
+    text-align: center;
+}
+
+.reverse {
+  background-color: red;
+  width: 200px;
+  border-radius: 50px;
+}
+
+
+.box-container {
+    border-top-right-radius: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+}
+
+.converter-box {
+    margin-inline: 40px;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    background-color: rgb(64, 70, 78);
+    border: 1px solid grey;
+    width: 500px;
+    height: 300px;
+}
+
+.converter-box p {
+    font-size: 320px;
+}
+.input {
+    width: 496px;
+    height: 270px;
+    background-color: transparent;
+    font-size: 20px;
+    color: rgb(255, 255, 255);
+    background-color: rgb(3, 23, 43);
+    border: none;
+    outline: none;
+    resize: none;
+
+
+}
+/* .input:focus {
+    outline: none;
+
+}
+
+.input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
+} */
+
+
+.reverse-button {
+    background-color: rgb(64, 70, 78);
+    border: 1px solid grey;
+    width: 100px;
+    padding: 20px;
+    border-radius: 20px;
+    flex-direction: column;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.reverse-button:hover {
+    border: 1px solid rgb(194, 194, 194);
+    background-color: rgb(49, 54, 61);
+    transition: all ease-in-out 0.2s;
+}
+
+.reset-button {
+    border: 1px solid grey;
+    margin-top: 40px;
+    background-color: rgb(64, 70, 78);
+    border-radius: 5px;
+}
+.reset-button:hover {
+    border: 1px solid rgb(194, 194, 194);
+    background-color: rgb(49, 54, 61);
+    transition: all ease-in-out 0.2s;
+}
+
+
+#input-status,
+#output-status {
+    background-color: #272a31;
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    margin: 0;
+    width: 100%;
+    height: 30px;
+    font-size: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.red {
+    background-color: rgb(233, 98, 20);
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+    margin-inline: 4px;
+}
+.green {
+    background-color: rgb(136, 255, 0);
+    border-radius: 50%;
+    width: 12px;
+    height: 12px;
+}
+
+
+
+.title-bar {
+    border-top-right-radius: 10px;
+    border-top-left-radius: 10px;
+    display: flex;
+    border-top: 50px;
+    align-items: center;
+    justify-content: center;
+    background-color: #272a31;
+}
+
+/* Converter */

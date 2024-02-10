@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/style.css">
+    <script src="./js/script.js"></script>
+    <title>Josumaru</title>
+</head>
+<body>
+    <header class="header">
+        <div class="header-left">
+            <nav>
+                <img src="./assets/images/profile.png" width="36" class="profile" alt="ayaya">
+            </nav>
+            <div class="header-link">
+                <nav>
+                    <a onclick="setConverter(0)">Home</a>
+                </nav>
+                <nav>
+                    <a onclick="setConverter(1)" >Converter</a>
+                </nav>
+                <nav>
+                    <a onclick="setConverter(2)">Tech Stack</a>
+                </nav>
+                <nav>
+                    <a onclick="setConverter(3)">Documentation</a>
+                </nav>
+            </div>
+        </div>
+        <div class="header-icon">
+            <nav>
+                <img src="./assets/images/github.svg" width="36" alt="github">
+            </nav>
+            <nav>
+                <img src="./assets/images/discord.svg" width="36" alt="github">
+            </nav>
+            <nav>
+                <img src="./assets/images/github.svg" width="36" alt="github">
+            </nav>
+        </div>
+    </header>
+
+    <div class="home">
+        <div class="glow-background"></div>
+        <div class="nav-button">
+            <div>
+                <p>Converto 1.0 available!</p>
+            </div>
+            <p>Let't Convert</p>
+        </div>
+        <h1 class="header-one">The web converter for celcius-fahrenheit websites</h1>
+        <p>
+            Astro powers the world's fastest websites, client-side web apps, dynamic API endpoints, and everything in-between.
+        </p>
+        <div class="code">
+            <div class="get-started">
+                <p>Get Started</p>
+            </div>
+            <div class="git">
+                <p>git clone https://github.com/revou-fundamental-course/5-feb-24-Josumaru</p>
+            </div>
+        </div>
+    </div>
+    <div class="converter">
+        <div class="converter-header">
+            <h1 class="header-one">
+                One frontend architecture with endless possibilities
+            </h1>
+            <p>
+                Step into the future with Islands — Astro's next-gen frontend architecture. Supercharge your development with automatic JS-to-HTML streaming and a beloved developer experience.
+            </p>
+        </div>
+        <div class="box-container">
+            <div class="glow-background"></div>
+            <div class="converter-box">
+                <div class="title-bar">
+                    <div class="red"></div>
+                    <div class="green"></div>
+                    <p id="input-status">celcius@archlinux</p>
+                </div>
+                <textarea name="input" spellcheck="false" class="input" id="input" cols="60" rows="19" oninput="convert(this)">[celcius@archlinux ~]#</textarea>
+                <!-- <input type="number" name="input" class="input" id="input" oninput="convert(this)"> -->
+            </div>
+            <div class="reverse-button" onclick="reverse()">
+                <img src="./assets/images/reverse.svg" width="45" alt="reset" srcset="">
+                <p>Reverse</p>
+            </div>
+            <div class="converter-box">
+                <div class="title-bar">
+                    <div class="red"></div>
+                    <div class="green"></div>
+                    <p id="output-status">fahrenheit@archlinux</p>
+                </div>
+                <textarea name="input" spellcheck="false" class="input" id="output" cols="60" rows="19">[fahrenheit@archlinux ~]#</textarea>
+                <!-- <input type="number" name="output" class="input" value="as" id="output"> -->
+            </div>
+        </div>
+        <div onclick="reset()" class="reset-button">
+            <p>Reset</p>
+        </div>
+    </div>
+    <div></div>
+</body>
+</html>
