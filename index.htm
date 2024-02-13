@@ -15,16 +15,13 @@
             </nav>
             <div class="header-link">
                 <nav>
-                    <a onclick="setConverter(0)">Home</a>
+                    <a onclick="setPage(0)">Home</a>
                 </nav>
                 <nav>
-                    <a onclick="setConverter(1)" >Converter</a>
+                    <a onclick="setPage(1)" >Converter</a>
                 </nav>
                 <nav>
-                    <a onclick="setConverter(2)">Tech Stack</a>
-                </nav>
-                <nav>
-                    <a onclick="setConverter(3)">Documentation</a>
+                    <a onclick="setPage(2)">Formula</a>
                 </nav>
             </div>
         </div>
@@ -35,9 +32,6 @@
             <nav>
                 <img src="./assets/images/discord.svg" width="36" alt="github">
             </nav>
-            <nav>
-                <img src="./assets/images/github.svg" width="36" alt="github">
-            </nav>
         </div>
     </header>
 
@@ -47,18 +41,21 @@
             <div>
                 <p>Converto 1.0 available!</p>
             </div>
-            <p>Let't Convert</p>
+            <p onclick="setPage(2)">Let't Convert</p>
         </div>
-        <h1 class="header-one">The web converter for celcius-fahrenheit websites</h1>
+        <h1 class="header-one">The web converter for celcius-fahrenheit</h1>
         <p>
             Astro powers the world's fastest websites, client-side web apps, dynamic API endpoints, and everything in-between.
         </p>
         <div class="code">
-            <div class="get-started">
+            <div class="get-started" onclick="setPage(2)">
                 <p>Get Started</p>
             </div>
             <div class="git">
-                <p>git clone https://github.com/revou-fundamental-course/5-feb-24-Josumaru</p>
+                <code>
+                    git clone https://github.com/revou-fundamental-course/5-feb-24-Josumaru 
+                </code>
+                <!-- <p>git clone https://github.com/revou-fundamental-course/5-feb-24-Josumaru</p> -->
             </div>
         </div>
     </div>
@@ -82,9 +79,14 @@
                 <textarea name="input" spellcheck="false" class="input" id="input" cols="60" rows="19" oninput="convert(this)">[celcius@archlinux ~]#</textarea>
                 <!-- <input type="number" name="input" class="input" id="input" oninput="convert(this)"> -->
             </div>
-            <div class="reverse-button" onclick="reverse()">
-                <img src="./assets/images/reverse.svg" width="45" alt="reset" srcset="">
-                <p>Reverse</p>
+            <div class="converter-button">
+                <div class="reverse-button" onclick="reverse()">
+                    <img class="reverse-icon" src="./assets/images/reverse.svg" width="45" alt="reset" srcset="">
+                    <p>Reverse</p>
+                </div>
+                <div class="reverse-button" onclick="setPage(4)">
+                    <p>Formula</p>
+                </div>
             </div>
             <div class="converter-box">
                 <div class="title-bar">
@@ -92,14 +94,32 @@
                     <div class="green"></div>
                     <p id="output-status">fahrenheit@archlinux</p>
                 </div>
-                <textarea name="input" spellcheck="false" class="input" id="output" cols="60" rows="19">[fahrenheit@archlinux ~]#</textarea>
-                <!-- <input type="number" name="output" class="input" value="as" id="output"> -->
+                <textarea name="input" spellcheck="false" class="input" id="output" cols="60" rows="19" readonly>[fahrenheit@archlinux ~]#</textarea>
             </div>
         </div>
         <div onclick="reset()" class="reset-button">
             <p>Reset</p>
         </div>
     </div>
-    <div></div>
+    <div class="formula-container">
+        <div class="converter-box">
+            <div class="title-bar">
+                <div class="red"></div>
+                <div class="green"></div>
+                <p id="output-status">formula@archlinux</p>
+            </div>
+            <textarea name="input" spellcheck="false" class="input" id="-" cols="60" rows="19" readonly>[formula@archlinux ~]# echo formula.txt
+
+Suhu S dalam derajat Fahrenheit (°F) sama dengan suhu S dalam derajat Celsius (°C) kali 9/5 tambah 32.
+
+S(°F) = (S(°C) 9/5) + 32
+
+atau
+
+S(°F) = (S(°C) × 1.8) + 32
+
+            </textarea>
+        </div>
+    </div>
 </body>
 </html>

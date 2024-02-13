@@ -2,10 +2,10 @@ const converter = document.getElementsByClassName("coverter");
 
 isCelcius = true;
 
-const setConverter = (page) => {
+const setPage = (page) => {
     scrollTo({
         left:0,
-        top: window.innerWidth*page, 
+        top: window.innerHeight*page + 84,
         behavior: "smooth"
     })
 }
@@ -24,7 +24,7 @@ const convert = (element) => {
     const data = element.value
     const value = data.split("#")[1]
     // console.log(data, data.split('#').length)
-    document.getElementById("output").value = isCelcius ? `[fahrenheit@archlinux ~]#${(value*9/5)+32}` : `[celcius@archlinux ~]#${(value - 32)*5/9}`;
+    document.getElementById("output").value = isCelcius ? `[fahrenheit@archlinux ~]# ${value} * (9/5) + 32 = ${(value*9/5)+32}` : `[celcius@archlinux ~]# ${value} - 32 * 5/9 = ${(value - 32)*5/9}`;
     
     if (data.split('#').length == 1) {
         reset()
